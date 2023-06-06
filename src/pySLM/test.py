@@ -17,5 +17,7 @@ desired = initial_profiles.lg(X-xoffset,Y-yoffset,1,1,.25)
 
 holo = initial_profiles.generate_hologram(desired,input,X,Y,.1)
 
-slm.updateArray(holo)
+slm.updateArray(holo) #Mais um
 slm.close()
+
+#Comentário do altilano
