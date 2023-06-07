@@ -10,9 +10,7 @@ def hg(x, y, n, m, w0, **kwargs):
     }
     var.update(kwargs)
     zr = np.pi*w0**2/var['lamb']
-    k = 2*np.pi/var['lamb']
     w = w0*np.sqrt(1 + (var['z']/zr)**2)
-    R = (var['z']**2 + zr**2)
     gouy = -1j*(n + m + 1)*np.arctan(var['z']/zr)
     E = (pn(np.sqrt(2)*x/w)*pm(np.sqrt(2)*y/w) * 
         np.exp(-(1-1j*var['z']/zr)*(x**2 + y**2)/w**2 + gouy))
@@ -21,11 +19,21 @@ def hg(x, y, n, m, w0, **kwargs):
 def diagonal_hg(x,y,m,n,w0, **kwargs):
     return hg((x-y)/np.sqrt(2),(x+y)/np.sqrt(2),m,n,w0, **kwargs)
 
-def lg(x,y,p,l,w0):
+def lg(x, y, p, l, w0, **kwargs):
+    var = {
+        'z' : 0,
+        'lamb' : 1064,
+    }
+    var.update(kwargs)
     lag = special.genlaguerre(p,abs(l))
-    square_radius = (x**2 + y**2)/w0
-    angle = np.arctan2(y,x)
-    return (2 * square_radius)**(abs(l)/2) * lag(2 * square_radius) * np.exp(-square_radius + l*angle*1j )
+    zr = np.pi*w0**2/var['lamb']
+    k = 2*np.pi/var['lamb']
+    w = w0*np.sqrt(1 + (var['z']/zr)**2)
+    R = (var['z']**2 + zr**2)
+    gouy = (np.abs(l) + 2*p + 1)*np.arctan(var['z']/zr)
+    r = np.sqrt((x**2 + y**2)/w)
+    E = ((np.sqrt(2)*r)**(np.abs(l)) * np.exp(-(r)**2) * lag(2*(r)**2) * np.exp(-1j*(k*var['z']*(x**2 + y**2)/(2*R) + l*np.arctan(y/x) - gouy)))
+    return E
 
 def normalize(holo):
     m = np.amin(holo)
