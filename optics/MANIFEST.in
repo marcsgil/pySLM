@@ -1,0 +1,20 @@
+include README.md
+include README.rst
+include README.html
+
+include LICENSE.txt
+
+include optics/*.py
+include optics/utils/*.py
+include optics/utils/array/*.py
+include optics/utils/display/*.py
+include optics/instruments/*.py
+include optics/instruments/cam/*.py
+include optics/instruments/slm/*.py
+include optics/instruments/dm/*.py
+include optics/gui/*.py
+include optics/gui/monitor/*.py
+include optics/examples/*.ipynb
+include optics/examples/*.py
+
+prune *.log

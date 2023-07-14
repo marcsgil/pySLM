@@ -1,0 +1,70 @@
+numpy>=1.21.3  # Numerical and linear algebra
+scipy>=1.5.4  # Scientific computing library
+matplotlib>=3.3.4  # Plotting library
+opencv-python>=4.5.5.64  # cv2. Open-Computer-Vision library for capturing camera input and full screen displays.
+screeninfo>=0.6.7  # Library to get information on the number of displays connected to this computer
+joblib>=1.0.0  # Library for scheduling jobs, but only used for caching to disk
+Pillow>=8.1.0  # PIL. the image processing library todo: needed?
+#pypiwin32;platform_system == "Windows"  # win32ui, win32con. Windows specific functions. todo: needed?
+imreg_dft  # Image registration library.
+pyfftw>=0.12.0  # The Fastest Fourier Transforms in the West
+numexpr>=2.7.2  # Evaluate numerical expressions in a text string
+jsonpickle>=1.5.1  # Configuration file saving and loading
+pyueye>=4.90.0.0 # uEye interface for iDS cameras
+pint>=0.16.1  # Provides utils.unit_registry to work with (SI) units.
+svglib>=1.2.1  # To manipulate Scalable Vector Graphics files
+reportlab>=3.6.6  # To rasterize svg files for test images.
+#pythonnet  # To call DOTNET libraries
+instrumental-lib  # Various lab instruments
+pyvisa-py # Needed for instrumental-lib unless National Instruments (NI) binary installed. todo: needed?
+pyftdi  # Connecting to Thorlabs stages over USB. todo: not used at the moment
+nplab>=1.0  # Used for Piezoconcept LT3 nanostage
+h5py >= 3.8.0  # for nplab https://github.com/nanophotonics/nplab
+pyside6 >= 6.3.0
+coloredlogs >= 15.0  # To color-format the log output on the console.
+python-usbtmc  # for Thorlabs Power meter PM100
+Pyro5 >= 5.13.1  # Python Remote objects
+msgpack_numpy >= 0.4.7  # For NumPy over Pyro
+
+# Not strictly needed:
+pyserial>=3.5  # todo: Used to connect to stage or laser? Standard Python?
+setuptools>=56.0.0
+sympy>=1.7.1
+sphinx>=6.1.3
+sphinx_autodoc_typehints>=1.22
+sphinxcontrib_mermaid>=0.8.1
+m2r2>=0.3.3
+added_value>=0.22.2
+
+# vispy  # todo: Is any of the this needed for anything critical? It depends on a C compiler which is not available on most Windows systems.
+# PyOpenGL
+# PyOpenGL_accelerate
+# pyglet
+# moderngl
+# moderngl-window
+# plotly
+# pandas
+
+future>=0.18.2
+xarray>=0.15.1
+xrft>=0.3.0
+torch  #for CPU use pip install torch -U --index-url https://download.pytorch.org/whl/cpu
+# torchvision
+# torchaudio
+pandas>=1.2.3
+qimage2ndarray>=1.9.0
+bokeh>=2.2.3
+moderngl>=5.6.4
+manim>=0.8.0
+stepic>=0.5.0
+cryptography>=36.0.0
+progressbar>=2.5
+pypandoc>=1.11
+# genicam>=1.2.0
+# harvesters>=1.4.0
+scikit-image>=0.20.0
+# sklearn
+tqdm>=4.65.0
+# for the documentation
+recommonmark>=0.7.1
+sphinx-rtd-theme>=1.2.0

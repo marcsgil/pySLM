@@ -1,0 +1,33 @@
+In regards the optical lens design tool. Most people use Zemax OpticStudio: https://www.zemax.com/pages/try-opticstudio-for-free. There are some free, but limited, tools available such as http://www.qioptiq-shop.com/en/Optics-Software/Winlens-Optical-Design-Software/ 
+It would be great to have an open source tool with a similar ease-of-use, combined with the all flexibility of Python.
+
+There are many optical design Python projects on GitHub and PyPI. The following two seem quite active:
+https://github.com/DCC-Lab/RayTracing with article https://www.spiedigitallibrary.org/journals/neurophotonics/volume-8/issue-01/010801/Tools-and-tutorial-on-practical-ray-tracing-for-microscopy/10.1117/1.NPh.8.1.010801.full?SSO=1
+https://github.com/mjhoptics/ray-optics             Jan 2023, import Zemax and CodeV, glass catalog, no optimization
+https://github.com/mjhoptics/opticalglass           Oct 2022, Reads glasses from refractiveindex.info
+https://github.com/cihologramas/pyoptools           Apr 2023, Can automatically load lenses from Thorlabs catalog. non-sequential   https://pyoptools.readthedocs.io/en/latest/notebooks/basic/00-Intro.html
+https://github.com/rdemaria/pyoptics                Mar 2023, NOT for light? LHC beam focussing instead of light?
+
+This one is less active but it seems rather complete:
+https://github.com/draustin/otk                      Jun 2020, Zemax read, lookup in RefractiveIndex.INFO
+
+And more:
+https://ray-optics.readthedocs.io/en/latest/,       Jul 2022     https://github.com/mjhoptics described in this conference it seems: https://opg.optica.org/abstract.cfm?uri=IODC-2021-120781G
+https://github.com/Sterncat/opticspy                Sep 2021     Zernike to Seidel coeff, PSF, OTF, MTF calculations
+https://github.com/quartiq/rayopt                   Jun 2020
+https://github.com/rfrazier716/PyRayT               Sep 2021, https://pyrayt.readthedocs.io/en/latest/install.html, tutorial: https://www.fotonixx.com/posts/design-a-camera-with-python-and-pyrayt/
+
+Physical optics, not ray traced:
+https://github.com/spacetelescope/poppy             Apr 2023,
+https://github.com/brandondube/prysm                Mar 2023, GPU (claims to be faster than the above). https://prysm.readthedocs.io/en/stable/
+https://github.com/opticspy/lightpipes              May 2022, non-sequential possible
+
+
+Some info on lens design:
+https://www.edmundoptics.com/knowledge-center/application-notes/optics/5-tips-for-designing-with-off-the-shelf-optics/
+https://www.degruyter.com/document/doi/10.1515/aot-2019-0002/html?lang=en
+
+Deep learning and lens design:
+https://opg.optica.org/DirectPDFAccess/A97DAAD7-F814-4927-A3F271F0DF721578_469441/oe-30-5-6531.pdf?da=1&id=469441&seq=0&mobile=no
++talks at FOM
+
